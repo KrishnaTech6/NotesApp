@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.notesapp.feature_note.data.data_source.NoteDatabase
 import com.example.notesapp.feature_note.data.repository.NoteRepositoryImp
 import com.example.notesapp.feature_note.domain.repository.NoteRepository
+import com.example.notesapp.feature_note.domain.use_case.AddNoteUseCase
 import com.example.notesapp.feature_note.domain.use_case.DeleteNoteUseCase
 import com.example.notesapp.feature_note.domain.use_case.GetNotesUseCase
 import com.example.notesapp.feature_note.domain.use_case.NoteUseCases
@@ -17,7 +18,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-
 
     @Provides
     @Singleton
@@ -40,7 +40,8 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUseCases{
         return NoteUseCases(
             getNotes = GetNotesUseCase(repository),
-            deleteNote = DeleteNoteUseCase(repository)
+            deleteNote = DeleteNoteUseCase(repository),
+            addNote = AddNoteUseCase(repository),
         )
     }
 
