@@ -23,6 +23,4 @@ class NoteRepositoryImp(
     override suspend fun deleteNote(note: Note) {
         dao.deleteNote(note)
     }
-
-
 }
