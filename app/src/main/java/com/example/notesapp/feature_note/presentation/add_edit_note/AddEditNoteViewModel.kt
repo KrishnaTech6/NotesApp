@@ -1,4 +1,4 @@
-package com.example.notesapp.feature_note.presentation.add_edit_note.components
+package com.example.notesapp.feature_note.presentation.add_edit_note
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableIntStateOf

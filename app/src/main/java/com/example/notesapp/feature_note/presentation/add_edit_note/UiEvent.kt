@@ -1,4 +1,4 @@
-package com.example.notesapp.feature_note.presentation.add_edit_note.components
+package com.example.notesapp.feature_note.presentation.add_edit_note
 
 sealed class UiEvent{
     data class ShowSnackBar(val message: String): UiEvent()
