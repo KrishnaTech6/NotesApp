@@ -30,6 +30,8 @@ import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
 import com.example.notesapp.feature_note.domain.model.Note
 import com.example.notesapp.ui.theme.BabyBlue
+import java.text.SimpleDateFormat
+import java.util.Locale
 
 @Composable
 fun NoteItem(
@@ -39,6 +41,9 @@ fun NoteItem(
     cutCornerSize: Dp = 30.dp,
     onDeleteClick: () -> Unit,
 ) {
+    val formattedDate = SimpleDateFormat("EEE, dd MMM yyyy hh:mm a", Locale.getDefault())
+        .format(note.timestamp)
+
     Box(modifier = modifier) {
         Canvas(modifier = Modifier.matchParentSize()) {
             val clipPath = Path().apply {
@@ -85,6 +90,12 @@ fun NoteItem(
                 color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 10,
                 overflow = TextOverflow.Ellipsis
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = formattedDate,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurface
             )
 
         }
