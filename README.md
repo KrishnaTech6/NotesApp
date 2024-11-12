@@ -1,3 +1,6 @@
+### App Flow {Clean Architecture}
+<img width="862" alt="Screenshot 2024-11-12 at 10 22 47 PM" src="https://github.com/user-attachments/assets/26b9394b-8ed1-4c6b-8a56-1198374183dc">
+
 ## App Screenshots
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c9bbea44-9fe1-4da9-89fb-ce995d39a6fb" alt="Image 4" width="150"/>
